@@ -7,6 +7,8 @@ using NineYi.BurgerShop.Burgers;
 using NineYi.BurgerShop.Breads;
 using NineYi.BurgerShop.Veggies;
 using NineYi.BurgerShop.Meats;
+using NineYi.BurgerShop.Burgers.Enums;
+using NineYi.BurgerShop.BurgerFactories;
 
 namespace NineYi.BurgerShop
 {
@@ -15,57 +17,53 @@ namespace NineYi.BurgerShop
         static void Main(string[] args)
         {
             //// 1. 使用者點餐
-
-            Console.Write("Which shop do you like? (1)Taipei (2)NewYork: ");
-            int shopChoice = int.Parse(Console.ReadLine());
-
-            Console.Write("What burger would you like? (1)Chicken (2)Pork: ");
-            int burgerChoice = int.Parse(Console.ReadLine());
+            var shopChoice = _UserSelectShop(); //// Select Shop
+            var burgerChoice = _UserOrderBurger(); //// Order burger
 
             //// 2. 準備漢堡
+            Burger burger = BurgerFactory.Create(shopChoice, burgerChoice);
 
-            Burger burger = null;
-
-            if (shopChoice == 1 && burgerChoice == 1)
-            {
-                burger = new TaipeiChickenBurger();
-
-                //// 備料
-                burger.Bread = new WhiteBread();
-                burger.Veggie = new Tomato();
-                burger.Meat = new TaiwanChicken();
-            }
-            else if (shopChoice == 1 && burgerChoice == 2)
-            {
-                burger = new TaipeiPorkBurger();
-
-                //// 備料
-                burger.Bread = new WhiteBread();
-                burger.Veggie = new Tomato();
-                burger.Meat = new Tenderloin();
-            }
-            else if (shopChoice == 2 && burgerChoice == 1)
-            {
-                burger = new NewYorkChickenBurger();
-
-                //// 備料
-                burger.Bread = new WheatBread();
-                burger.Veggie = new Onion();
-                burger.Meat = new Turkey();
-            }
-            else if(shopChoice == 2 && burgerChoice == 2)
-            {
-                burger = new NewYorkPorkBurger();
-
-                //// 備料
-                burger.Bread = new WheatBread();
-                burger.Veggie = new Onion();
-                burger.Meat = new Bacon();
-            }
 
             //// 3. 烹飪漢堡
-
             burger.Cook();
+        }
+
+        private static ShopType _UserSelectShop()
+        {
+            Console.Write("Which shop do you like? (1)Taipei (2)NewYork: ");
+
+            int burgerChoice = int.Parse(Console.ReadLine());
+
+            switch (burgerChoice)
+            {
+                case 1:
+                    return ShopType.Taipei;
+
+                case 2:
+                    return ShopType.NewYork;
+
+                default:
+                    throw new ArgumentException("No such burger");
+            }
+        }
+
+        private static BurgerType _UserOrderBurger()
+        {
+            Console.Write("What burger would you like? (1)Chicken (2)Pork: ");
+
+            int burgerChoice = int.Parse(Console.ReadLine());
+
+            switch(burgerChoice)
+            {
+                case 1:
+                    return BurgerType.Chicken;
+
+                case 2:
+                    return BurgerType.Pork;
+
+                default:
+                    throw new ArgumentException("No such burger");
+            }
         }
     }
 }

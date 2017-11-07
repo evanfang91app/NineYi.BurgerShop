@@ -46,7 +46,10 @@
     <Compile Include="Breads\Bread.cs" />
     <Compile Include="Breads\WheatBread.cs" />
     <Compile Include="Breads\WhiteBread.cs" />
+    <Compile Include="BurgerFactories\BurgerFactory.cs" />
     <Compile Include="Burgers\Burger.cs" />
+    <Compile Include="Burgers\Enums\BurgerType.cs" />
+    <Compile Include="Burgers\Enums\ShopType.cs" />
     <Compile Include="Burgers\NewYorkChickenBurger.cs" />
     <Compile Include="Burgers\NewYorkPorkBurger.cs" />
     <Compile Include="Burgers\TaipeiChickenBurger.cs" />

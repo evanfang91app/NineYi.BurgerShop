@@ -11,15 +11,19 @@ using NineYi.BurgerShop.IngredientFactories;
 
 namespace NineYi.BurgerShop.BurgerFactories.FactoryMethods
 {
-    public class NewYorkPorkBurgerFactory : IBurgerFactory
+    public class PorkBurgerFactory : IBurgerFactory
     {
         public Burger Create(IIngredientFactory IngredientFactory)
         {
-            var burger = new NewYorkPorkBurger();
+            var burger = new PorkBurger();
 
             //// 備料
+
             burger.Bread = IngredientFactory.GetBread();
+
             burger.Veggie = IngredientFactory.GetVeggie();
+
+            //// 準備豬肉
             burger.Meat = IngredientFactory.GetPork();
 
             return burger;

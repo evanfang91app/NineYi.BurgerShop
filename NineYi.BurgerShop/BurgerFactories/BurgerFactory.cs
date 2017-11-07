@@ -18,33 +18,31 @@ namespace NineYi.BurgerShop.BurgerFactories
         public static Burger Create(ShopType shopType, BurgerType burgerType)
         {
             //// 製作漢堡的工廠
-            IBurgerFactory factory = null;
+            IBurgerFactory burgerFactory = null;
+
+            if (burgerType == BurgerType.Chicken)
+            {
+                burgerFactory = new ChickenBurgerFactory();
+            }
+            else if(burgerType == BurgerType.Pork)
+            {
+                burgerFactory = new PorkBurgerFactory();
+            }
 
             //// 提供原料工廠
             IIngredientFactory ingredientFactory = null;
 
-            if (shopType == ShopType.Taipei && burgerType == BurgerType.Chicken)
+            if (shopType == ShopType.Taipei)
             {
-                factory = new TaipeiChickenBurgerFactory();
                 ingredientFactory = new TaipeiIngredientFactory();
             }
-            else if (shopType == ShopType.Taipei && burgerType == BurgerType.Pork)
+            else if (shopType == ShopType.NewYork)
             {
-                factory = new TaipeiPorkBurgerFactory();
-                ingredientFactory = new TaipeiIngredientFactory();
-            }
-            else if (shopType == ShopType.NewYork && burgerType == BurgerType.Chicken)
-            {
-                factory = new NewYorkChickenBurgerFactory();
                 ingredientFactory = new NewYorkIngredientFactory();
             }
-            else if (shopType == ShopType.NewYork && burgerType == BurgerType.Pork)
-            {
-                factory = new NewYorkPorkBurgerFactory();
-                ingredientFactory = new NewYorkIngredientFactory();
-            }
-
-            return factory.Create(ingredientFactory);
+            
+            //// 使用原料工廠提共的原料製作漢堡
+            return burgerFactory.Create(ingredientFactory);
         }
     }
 }

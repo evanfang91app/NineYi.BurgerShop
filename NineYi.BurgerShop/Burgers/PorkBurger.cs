@@ -9,11 +9,11 @@ namespace NineYi.BurgerShop.Burgers
     /// <summary>
     /// 紐約豬肉堡
     /// </summary>
-    public class NewYorkPorkBurger : Burger
+    public class PorkBurger : Burger
     {
-        public NewYorkPorkBurger()
+        public PorkBurger()
         {
-            this.Name = "NewYork Pork Burger";
+            this.Name = "Pork Burger";
         }
     }
 }

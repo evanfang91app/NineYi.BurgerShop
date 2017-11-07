@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace NineYi.BurgerShop.Burgers
 {
     /// <summary>
-    /// 台北豬肉堡
+    /// 紐約香雞堡
     /// </summary>
-    public class TaipeiPorkBurger : Burger
+    public class ChickenBurger : Burger
     {
-        public TaipeiPorkBurger()
+        public ChickenBurger()
         {
-            this.Name = "Taipei Pork Burger";
+            this.Name = "Chicken Burger";
         }
     }
 }

@@ -7,19 +7,20 @@ using NineYi.BurgerShop.Burgers;
 using NineYi.BurgerShop.Breads;
 using NineYi.BurgerShop.Veggies;
 using NineYi.BurgerShop.Meats;
+using NineYi.BurgerShop.IngredientFactories;
 
 namespace NineYi.BurgerShop.BurgerFactories.FactoryMethods
 {
     public class TaipeiPorkBurgerFactory : IBurgerFactory
     {
-        public Burger Create()
+        public Burger Create(IIngredientFactory IngredientFactory)
         {
             var burger = new TaipeiPorkBurger();
 
             //// 備料
-            burger.Bread = new WhiteBread();
-            burger.Veggie = new Tomato();
-            burger.Meat = new Tenderloin();
+            burger.Bread = IngredientFactory.GetBread();
+            burger.Veggie = IngredientFactory.GetVeggie();
+            burger.Meat = IngredientFactory.GetPork();
 
             return burger;
         }

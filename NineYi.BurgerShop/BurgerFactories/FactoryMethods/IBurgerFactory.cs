@@ -1,4 +1,5 @@
 ﻿using NineYi.BurgerShop.Burgers;
+using NineYi.BurgerShop.IngredientFactories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace NineYi.BurgerShop.BurgerFactories.FactoryMethods
 {
     public interface IBurgerFactory
     {
-        Burger Create();
+        Burger Create(IIngredientFactory IngredientFactory);
     }
 }

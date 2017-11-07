@@ -1,4 +1,5 @@
 ﻿using NineYi.BurgerShop.Breads;
+using NineYi.BurgerShop.BurgerFactories.FactoryMethods;
 using NineYi.BurgerShop.Burgers;
 using NineYi.BurgerShop.Burgers.Enums;
 using NineYi.BurgerShop.Meats;
@@ -15,46 +16,27 @@ namespace NineYi.BurgerShop.BurgerFactories
     {
         public static Burger Create(ShopType shopType, BurgerType burgerType)
         {
-            Burger burger = null;
+            //// 製作漢堡的工廠
+            IBurgerFactory factory = null;
 
             if (shopType == ShopType.Taipei && burgerType == BurgerType.Chicken)
             {
-                burger = new TaipeiChickenBurger();
-
-                //// 備料
-                burger.Bread = new WhiteBread();
-                burger.Veggie = new Tomato();
-                burger.Meat = new TaiwanChicken();
+                factory = new TaipeiChickenBurgerFactory();
             }
             else if (shopType == ShopType.Taipei && burgerType == BurgerType.Pork)
             {
-                burger = new TaipeiPorkBurger();
-
-                //// 備料
-                burger.Bread = new WhiteBread();
-                burger.Veggie = new Tomato();
-                burger.Meat = new Tenderloin();
+                factory = new TaipeiPorkBurgerFactory();
             }
             else if (shopType == ShopType.NewYork && burgerType == BurgerType.Chicken)
             {
-                burger = new NewYorkChickenBurger();
-
-                //// 備料
-                burger.Bread = new WheatBread();
-                burger.Veggie = new Onion();
-                burger.Meat = new Turkey();
+                factory = new NewYorkChickenBurgerFactory();
             }
             else if (shopType == ShopType.NewYork && burgerType == BurgerType.Pork)
             {
-                burger = new NewYorkPorkBurger();
-
-                //// 備料
-                burger.Bread = new WheatBread();
-                burger.Veggie = new Onion();
-                burger.Meat = new Bacon();
+                factory = new NewYorkPorkBurgerFactory();
             }
 
-            return burger;
+            return factory.Create();
         }
     }
 }

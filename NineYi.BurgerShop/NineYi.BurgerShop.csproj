@@ -47,6 +47,11 @@
     <Compile Include="Breads\WheatBread.cs" />
     <Compile Include="Breads\WhiteBread.cs" />
     <Compile Include="BurgerFactories\BurgerFactory.cs" />
+    <Compile Include="BurgerFactories\FactoryMethods\IBurgerFactory.cs" />
+    <Compile Include="BurgerFactories\FactoryMethods\NewYorkChickenBurgerFactory.cs" />
+    <Compile Include="BurgerFactories\FactoryMethods\NewYorkPorkBurgerFactory.cs" />
+    <Compile Include="BurgerFactories\FactoryMethods\TaipeiChickenBurgerFactory.cs" />
+    <Compile Include="BurgerFactories\FactoryMethods\TaipeiPorkBurgerFactory.cs" />
     <Compile Include="Burgers\Burger.cs" />
     <Compile Include="Burgers\Enums\BurgerType.cs" />
     <Compile Include="Burgers\Enums\ShopType.cs" />

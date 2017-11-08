@@ -18,12 +18,14 @@ namespace NineYi.BurgerShop.IngredientFactories
 
         public Meat GetChicken()
         {
-            return new JapanChicken();
+            //// 美式風味!
+            return new Turkey();
         }
 
         public Meat GetPork()
         {
-            return new JapanPork();
+            //// 美式風味!
+            return new Bacon();
         }
 
         public Veggie GetVeggie()

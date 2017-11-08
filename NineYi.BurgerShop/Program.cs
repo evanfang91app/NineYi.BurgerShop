@@ -30,7 +30,7 @@ namespace NineYi.BurgerShop
 
         private static ShopType _UserSelectShop()
         {
-            Console.Write("Which shop do you like? (1)Taipei (2)NewYork: ");
+            Console.Write("Which shop do you like? (1)Taipei (2)NewYork (3)Tokyo: ");
 
             int burgerChoice = int.Parse(Console.ReadLine());
 
@@ -41,6 +41,9 @@ namespace NineYi.BurgerShop
 
                 case 2:
                     return ShopType.NewYork;
+
+                case 3:
+                    return ShopType.Tokyo;
 
                 default:
                     throw new ArgumentException("No such burger");

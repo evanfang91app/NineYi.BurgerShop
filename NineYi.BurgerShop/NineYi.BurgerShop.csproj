@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Breads\Bread.cs" />
     <Compile Include="Breads\WheatBread.cs" />
+    <Compile Include="Breads\JapanBread.cs" />
     <Compile Include="Breads\WhiteBread.cs" />
     <Compile Include="BurgerFactories\BurgerFactory.cs" />
     <Compile Include="BurgerFactories\FactoryMethods\IBurgerFactory.cs" />
@@ -58,13 +59,17 @@
     <Compile Include="IngredientFactories\IIngredientFactory.cs" />
     <Compile Include="IngredientFactories\NewYorkIngredientFactory.cs" />
     <Compile Include="IngredientFactories\TaipeiIngredientFactory.cs" />
+    <Compile Include="IngredientFactories\TokyoIngredientFactory.cs" />
     <Compile Include="Meats\Bacon.cs" />
+    <Compile Include="Meats\JapanPork.cs" />
     <Compile Include="Meats\Meat.cs" />
+    <Compile Include="Meats\JapanChicken.cs" />
     <Compile Include="Meats\TaiwanChicken.cs" />
     <Compile Include="Meats\Tenderloin.cs" />
     <Compile Include="Meats\Turkey.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Veggies\JapanVeggie.cs" />
     <Compile Include="Veggies\Onion.cs" />
     <Compile Include="Veggies\Tomato.cs" />
     <Compile Include="Veggies\Veggie.cs" />

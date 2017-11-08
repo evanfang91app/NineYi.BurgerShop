@@ -10,6 +10,8 @@ namespace NineYi.BurgerShop.Burgers.Enums
     {
         Taipei = 1,
 
-        NewYork = 2
+        NewYork = 2,
+
+        Tokyo = 3
     }
 }

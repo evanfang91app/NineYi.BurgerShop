@@ -40,7 +40,11 @@ namespace NineYi.BurgerShop.BurgerFactories
             {
                 ingredientFactory = new NewYorkIngredientFactory();
             }
-            
+            else if (shopType == ShopType.Tokyo)
+            {
+                ingredientFactory = new TokyoIngredientFactory();
+            }
+
             //// 使用原料工廠提共的原料製作漢堡
             return burgerFactory.Create(ingredientFactory);
         }

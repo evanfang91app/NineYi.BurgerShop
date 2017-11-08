@@ -16,6 +16,7 @@ namespace NineYi.BurgerShop
     {
         static void Main(string[] args)
         {
+
             //// 1. 使用者點餐
             var shopChoice = _UserSelectShop(); //// Select Shop
             var burgerChoice = _UserOrderBurger(); //// Order burger

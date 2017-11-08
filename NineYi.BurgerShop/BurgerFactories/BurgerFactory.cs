@@ -24,9 +24,13 @@ namespace NineYi.BurgerShop.BurgerFactories
             {
                 burgerFactory = new ChickenBurgerFactory();
             }
-            else if(burgerType == BurgerType.Pork)
+            else if (burgerType == BurgerType.Pork)
             {
                 burgerFactory = new PorkBurgerFactory();
+            }
+            else if (burgerType == BurgerType.Fish)
+            {
+                burgerFactory = new FishBurgerFactory();
             }
 
             //// 提供原料工廠

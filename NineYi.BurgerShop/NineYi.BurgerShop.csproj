@@ -48,6 +48,7 @@
     <Compile Include="Breads\JapanBread.cs" />
     <Compile Include="Breads\WhiteBread.cs" />
     <Compile Include="BurgerFactories\BurgerFactory.cs" />
+    <Compile Include="BurgerFactories\FactoryMethods\FishBurgerFactory.cs" />
     <Compile Include="BurgerFactories\FactoryMethods\IBurgerFactory.cs" />
     <Compile Include="BurgerFactories\FactoryMethods\ChickenBurgerFactory.cs" />
     <Compile Include="BurgerFactories\FactoryMethods\PorkBurgerFactory.cs" />
@@ -55,12 +56,14 @@
     <Compile Include="Burgers\Enums\BurgerType.cs" />
     <Compile Include="Burgers\Enums\ShopType.cs" />
     <Compile Include="Burgers\ChickenBurger.cs" />
+    <Compile Include="Burgers\FishBurger.cs" />
     <Compile Include="Burgers\PorkBurger.cs" />
     <Compile Include="IngredientFactories\IIngredientFactory.cs" />
     <Compile Include="IngredientFactories\NewYorkIngredientFactory.cs" />
     <Compile Include="IngredientFactories\TaipeiIngredientFactory.cs" />
     <Compile Include="IngredientFactories\TokyoIngredientFactory.cs" />
     <Compile Include="Meats\Bacon.cs" />
+    <Compile Include="Meats\Cod.cs" />
     <Compile Include="Meats\JapanPork.cs" />
     <Compile Include="Meats\Meat.cs" />
     <Compile Include="Meats\JapanChicken.cs" />

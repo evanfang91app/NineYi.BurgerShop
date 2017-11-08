@@ -10,6 +10,8 @@ namespace NineYi.BurgerShop.Burgers.Enums
     {
         Chicken = 1,
 
-        Pork = 2
+        Pork = 2,
+
+        Fish = 3
     }
 }

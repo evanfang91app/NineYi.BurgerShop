@@ -21,5 +21,7 @@ namespace NineYi.BurgerShop.IngredientFactories
         Meat GetChicken();
 
         Meat GetPork();
+
+        Meat GetFish();
     }
 }

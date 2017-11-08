@@ -30,5 +30,10 @@ namespace NineYi.BurgerShop.IngredientFactories
         {
             return new Tomato();
         }
+
+        public Meat GetFish()
+        {
+            return new Cod();
+        }
     }
 }

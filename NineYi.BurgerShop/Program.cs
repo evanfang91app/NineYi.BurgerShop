@@ -52,7 +52,7 @@ namespace NineYi.BurgerShop
 
         private static BurgerType _UserOrderBurger()
         {
-            Console.Write("What burger would you like? (1)Chicken (2)Pork: ");
+            Console.Write("What burger would you like? (1)Chicken (2)Pork (3)Fish: ");
 
             int burgerChoice = int.Parse(Console.ReadLine());
 
@@ -63,6 +63,9 @@ namespace NineYi.BurgerShop
 
                 case 2:
                     return BurgerType.Pork;
+
+                case 3:
+                    return BurgerType.Fish;
 
                 default:
                     throw new ArgumentException("No such burger");

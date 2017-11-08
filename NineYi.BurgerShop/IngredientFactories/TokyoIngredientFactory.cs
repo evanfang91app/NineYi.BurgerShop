@@ -18,7 +18,7 @@ namespace NineYi.BurgerShop.IngredientFactories
 
         public Meat GetChicken()
         {
-            return new JapanPork();
+            return new JapanChicken();
         }
 
         public Meat GetPork()
